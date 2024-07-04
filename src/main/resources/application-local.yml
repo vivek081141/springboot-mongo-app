@@ -1,0 +1,16 @@
+server:
+  port: 18012
+  servlet:
+    context-path: /starter
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mongoboot
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true

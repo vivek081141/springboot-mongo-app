@@ -9,12 +9,12 @@
 		<relativePath/>
 	</parent>
 	<groupId>com.springboot</groupId>
-	<artifactId>starter</artifactId>
+	<artifactId>spring-mongo-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>starter</name>
+	<name>spring-mongo-app</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -73,6 +73,26 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.3</version>
+				<configuration>
+					<from>
+						<image>openjdk:17-jdk-slim</image>
+					</from>
+					<to>
+						<image>registry.hub.docker.com/vivek081141/springboot-mongo-app:latest</image>
+					</to>
+					<container>
+						<ports>
+							<port>18082</port>
+						</ports>
+						<creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+					</container>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 

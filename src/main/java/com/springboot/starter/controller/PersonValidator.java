@@ -20,7 +20,7 @@ public class PersonValidator implements Validator {
     public void validate(Object target, Errors errors) {
         Person person = (Person) target;
         if (person.getResume() == null) {
-            errors.rejectValue("resume", ErrorCode.ERROR_USER_RESUME.getCode(), ErrorCode.ERROR_USER_RESUME.getMessage());
+            //errors.rejectValue("resume", ErrorCode.ERROR_USER_RESUME.getCode(), ErrorCode.ERROR_USER_RESUME.getMessage());
         }
         return;
     }
