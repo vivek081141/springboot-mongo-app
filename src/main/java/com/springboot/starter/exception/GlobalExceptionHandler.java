@@ -2,7 +2,6 @@ package com.springboot.starter.exception;
 
 import java.io.IOException;
 import java.util.List;
-import javax.annotation.Resources;
 import org.springdoc.api.ErrorMessage;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,15 +16,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-   /* @ExceptionHandler(Throwable.class)
-    @ResponseStatus(code = HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResponseEntity<ErrorMessage> problem(final Throwable e) {
-        String message = e.getMessage();
-        ErrorMessage errorMessage = new ErrorMessage(Resources.getResource(Resources.LOGS_CORELATION_ID, String.class),
-                message);
-        return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
-*/
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseBody

@@ -1,0 +1,11 @@
+ReleaseName
+# folders
+target
+.idea
+**/.idea/**
+**/assembly
+!assembly
+**/generated
+**/target/**
+/node
+**/node_modules
