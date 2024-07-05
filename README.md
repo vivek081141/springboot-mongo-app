@@ -23,9 +23,10 @@ This is a Spring Boot application that connects to a MongoDB database. The appli
 
 ## Setup Instructions
 
+```bash
 ### Step 1: Clone the Repository
 
-```bash
+
 git clone <repository-url>
 cd <repository-directory>
 
@@ -37,3 +38,4 @@ cd <repository-directory>
 
 ### Step 4: Run the Application with Docker Compose
 - docker-compose up
+```
