@@ -27,20 +27,20 @@ jobs:
       run: mvn clean package -Dmaven.test.skip=true
 
     - name: Print Docker Hub Username
-      run: echo "vivek081141"
+      run: echo ${{ secrets.DOCKER_USERNAME }}
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
-        username: "vivek081141"
-        password: "India@01"
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build and Push Docker image
       uses: docker/build-push-action@v2
       with:
         context: .
         push: true
-        tags: vivek081141/my-springboot-mongo-app:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/my-springboot-mongo-app:latest
 
     - name: Log out from Docker Hub
       run: docker logout
