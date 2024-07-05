@@ -9,7 +9,7 @@ services:
     environment:
       MONGO_INITDB_DATABASE: mongoboot
     volumes:
-      - /Users/I350472/DOCKER/mongo/db:/data/db  # Mapping host folder to container folder
+      - /Users/XXXXX/DOCKER/mongo/db:/data/db  # Mapping host folder to container folder
 
   my-springboot-mongo-app:
     image: my-springboot-mongo-app:latest
