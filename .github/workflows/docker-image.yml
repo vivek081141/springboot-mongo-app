@@ -27,7 +27,7 @@ jobs:
       run: mvn clean package -Dmaven.test.skip=true
 
     - name: Print Docker Hub Username
-      run: echo ${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_PASSWORD }}
+      run: echo ${{ secrets.DOCKER_USERNAME }}
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
