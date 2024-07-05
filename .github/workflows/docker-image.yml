@@ -40,7 +40,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/my-springboot-mongo-app:latest
+        tags: vivek081141/my-springboot-mongo-app:latest
 
     - name: Log out from Docker Hub
       run: docker logout
