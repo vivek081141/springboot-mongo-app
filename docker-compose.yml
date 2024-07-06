@@ -9,10 +9,10 @@ services:
     environment:
       MONGO_INITDB_DATABASE: mongoboot
     volumes:
-      - /opt/mongo-db/data:/data/db  # Mapping host folder to container folder
+      - /Users/Shared/mongo-db/data:/data/db  # Mapping host folder to container folder
 
   my-springboot-mongo-app:
-    image: my-springboot-mongo-app:latest
+    image: vivek081141/my-springboot-mongo-app:latest
     container_name: my-springboot-mongo-app
     ports:
       - "18012:18012"
@@ -23,6 +23,7 @@ services:
       - SPRING_PROFILES_ACTIVE=prod
     depends_on:
       - mongodb
+    platform: linux/amd64
 
 volumes:
   mongo-data:
