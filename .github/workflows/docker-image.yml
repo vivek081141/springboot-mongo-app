@@ -40,6 +40,7 @@ jobs:
       with:
         context: .
         push: true
+        platforms: linux/arm64  # Mac M1 chip
         tags: ${{ secrets.DOCKER_USERNAME }}/my-springboot-mongo-app:latest
 
     - name: Log out from Docker Hub
