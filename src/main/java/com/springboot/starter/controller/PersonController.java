@@ -41,6 +41,11 @@ public class PersonController {
         return ResponseEntity.ok().body(personEntity);
     }
 
+    @GetMapping(path = "/health" )
+    public ResponseEntity health()  {
+        return ResponseEntity.ok().body("OK");
+    }
+
     @GetMapping(path = "/getPersons" )
     public ResponseEntity getPersons()  {
         List<Person> personEntity = personRepository.findAll();
