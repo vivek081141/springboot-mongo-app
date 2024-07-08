@@ -26,6 +26,8 @@ spec:
               value: mongoboot
             - name: SPRING_PROFILES_ACTIVE
               value: prod
+      nodeSelector:
+        kubernetes.io/arch: amd64 # Ensures the pod runs on AMD64 nodes
 ---
 apiVersion: v1
 kind: Service
