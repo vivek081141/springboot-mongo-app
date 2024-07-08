@@ -34,6 +34,7 @@ kind: Service
 metadata:
   name: my-springboot-mongo-app
 spec:
+  type: LoadBalancer # Assuming you want external access to this service
   ports:
     - port: 18012
       targetPort: 18012
