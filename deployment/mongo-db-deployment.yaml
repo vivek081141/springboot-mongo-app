@@ -26,13 +26,14 @@ spec:
       volumes:
         - name: mongo-data
           hostPath:
-            path: /opt/mongo-db/data
+            path: /opt/mongo-db/data # Ensure this path exists on your host
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: mongodb
 spec:
+  type: LoadBalancer
   ports:
     - port: 27017
       targetPort: 27017
